@@ -6,7 +6,7 @@ e.g.
 soap_align: depend.fq
   soap -p 20 ...other options...
 ```
-## Version 3.0
+## Version 1.0
 
 ## Features
 - Read Makefile and submit parallel multi-threads jobs to Sun Grid Engine (SGE).
