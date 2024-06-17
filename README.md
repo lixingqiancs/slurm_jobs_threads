@@ -1,4 +1,4 @@
-# qsub_jobs_threads
+# slurm_jobs_threads
 ## Makefile as workflow control language
 The makefile simply contains rules and a rule consists of three parts: target, (dependencies) and commands.
 e.g.
@@ -9,10 +9,10 @@ soap_align: depend.fq
 ## Version 1.0
 
 ## Features
-- Read Makefile and submit parallel multi-threads jobs to Sun Grid Engine (SGE).
+- Read Makefile and submit parallel multi-threads jobs to SLURM （Simple Linux Utility for Resource Management）.
 - If user qdel a job in 'qw' state, a period of time(TIMEOUT) later the program will stop.
-- Jobs will be submitted in -pe smp(PE), and log directory will be 'log_SGE'(LOG_DIR).
-- Logs will be append to file log_SGE.out.
+- Jobs will be submitted in -pe smp(PE), and log directory will be 'log_SLURM'(LOG_DIR).
+- Logs will be append to file log_Slurm.out.
 - Specifal comment in the 'target: dependence' line, #-@ INT, will be the threads (INT). 
 - No comment (#...) is allowed in command line.
 - Send notification to telegram
@@ -32,7 +32,7 @@ export PATH=dir/of/qsub_jobs_threads:$PATH
 
 ## Run:
 ```
-qsub_jobs_threads  -f makefile -j #paralell_jobs -q queue.q
+slurm_jobs_threads  -f makefile -j #paralell_jobs -q queue1
 # More options will be shown in terminal using:
-qsub_jobs_threads -h
+slurm_jobs_threads -h
 ```
