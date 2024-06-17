@@ -19,8 +19,8 @@ soap_align: depend.fq
 
 ## Mechanism:
 - Using 2 objects Parallel_jobs(with nested _Job), and Makefile(with nested _Rule).
-- Using qstat (1st(id) and 5th(state) column) to get jobs ongoing/waiting information. 
-- Using qacct (exit_status row) to get jobs stopped(success/fail) information.
+- Using squeue (1st(id) and 5th(state) column) to get jobs ongoing/waiting information. 
+- Using sacct (exit_status row) to get jobs stopped(success/fail) information.
 
 ## Install:
 ```
