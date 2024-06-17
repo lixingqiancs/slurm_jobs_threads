@@ -25,9 +25,9 @@ soap_align: depend.fq
 ## Install:
 ```
 # download.
-git clone git@github.com:dazhouze/qsub_jobs_threads.git
+git clone git@github.com:dazhouze/slurm_jobs_threads.git
 # add the directory to environment variable.
-export PATH=dir/of/qsub_jobs_threads:$PATH
+export PATH=dir/of/slurm_jobs_threads:$PATH
 ```
 
 ## Run:
